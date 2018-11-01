@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serialized version="20.1" xml:space="preserve">
+<serializableOrderedMap>
+<entry>
+<String>code-templates</String>
+<codeTemplateItem-array>
+
+<codeTemplateItem>
+  <field name="contentType">
+    <String>text/xsd</String>
+  </field>
+  <field name="unparsedInsertString">
+    <String>&lt;xs:element name="${caret}" type="">
+    &lt;xs:annotation>
+    &lt;xs:documentation>&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;/xs:element></String>
+  </field>
+  <field name="descriptionString">
+    <String>NIEM element</String>
+  </field>
+  <field name="renderString">
+    <String>niem-elt</String>
+  </field>
+  <field name="enabled">
+    <Boolean>true</Boolean>
+  </field>
+  <field name="accelerator">
+    <null/>
+  </field>
+</codeTemplateItem>
+
+<codeTemplateItem>
+  <field name="contentType">
+    <String>text/xsd</String>
+  </field>
+  <field name="unparsedInsertString">
+    <String>&lt;xs:element name="${caret}Abstract" abstract="true">
+    &lt;xs:annotation>
+    &lt;xs:documentation>A data concept for ...&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;/xs:element></String>
+  </field>
+  <field name="descriptionString">
+    <String>NIEM abstract element</String>
+  </field>
+  <field name="renderString">
+    <String>niem-elt-abstr</String>
+  </field>
+  <field name="enabled">
+    <Boolean>true</Boolean>
+  </field>
+  <field name="accelerator">
+    <null/>
+  </field>
+</codeTemplateItem>
+
+<codeTemplateItem>
+  <field name="contentType">
+    <String>text/xsd</String>
+  </field>
+  <field name="unparsedInsertString">
+    <String>&lt;xs:element name="${caret}" type="" substitutionGroup="">
+    &lt;xs:annotation>
+    &lt;xs:documentation>&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;/xs:element></String>
+  </field>
+  <field name="descriptionString">
+    <String>NIEM substitutable element</String>
+  </field>
+  <field name="renderString">
+    <String>niem-elt-subst</String>
+  </field>
+  <field name="enabled">
+    <Boolean>true</Boolean>
+  </field>
+  <field name="accelerator">
+    <null/>
+  </field>
+</codeTemplateItem>
+
+<codeTemplateItem>
+  <field name="contentType">
+    <String>text/xsd</String>
+  </field>
+  <field name="unparsedInsertString">
+    <String>&lt;xs:attribute name="${caret}" type="">
+    &lt;xs:annotation>
+    &lt;xs:documentation>&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;/xs:attribute></String>
+  </field>
+  <field name="descriptionString">
+    <String>NIEM attribute</String>
+  </field>
+  <field name="renderString">
+    <String>niem-attr</String>
+  </field>
+  <field name="enabled">
+    <Boolean>true</Boolean>
+  </field>
+  <field name="accelerator">
+    <null/>
+  </field>
+</codeTemplateItem>
+
+<codeTemplateItem>
+  <field name="contentType">
+    <String>text/xsd</String>
+  </field>
+  <field name="unparsedInsertString">
+    <String>&lt;xs:complexType name="${caret}Type">
+    &lt;xs:annotation>
+    &lt;xs:documentation>&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;xs:complexContent>
+    &lt;xs:extension base="structures:ObjectType">
+    &lt;xs:sequence>
+    &lt;xs:element ref="" minOccurs="1" maxOccurs="1">
+    &lt;/xs:sequence>
+    &lt;/xs:extension>
+    &lt;/xs:complexContent>
+    &lt;/xs:complexType></String>
+  </field>
+  <field name="descriptionString">
+    <String>NIEM complex type with complex content (sub-properties)</String>
+  </field>
+  <field name="renderString">
+    <String>niem-type-ccc</String>
+  </field>
+  <field name="enabled">
+    <Boolean>true</Boolean>
+  </field>
+  <field name="accelerator">
+    <null/>
+  </field>
+</codeTemplateItem>
+
+<codeTemplateItem>
+  <field name="contentType">
+    <String>text/xsd</String>
+  </field>
+  <field name="unparsedInsertString">
+    <String>&lt;xs:complexType name="${caret}Type">
+    &lt;xs:annotation>
+    &lt;xs:documentation>&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;xs:simpleContent>
+    &lt;xs:extension base="">
+    &lt;xs:attributeGroup ref="structures:SimpleObjectAttributeGroup">
+    &lt;/xs:extension>
+    &lt;/xs:simpleContent>
+    &lt;/xs:complexType></String>
+  </field>
+  <field name="descriptionString">
+    <String>NIEM complex type with simple content (complex type with a value)</String>
+  </field>
+  <field name="renderString">
+    <String>niem-type-csc</String>
+  </field>
+  <field name="enabled">
+    <Boolean>true</Boolean>
+  </field>
+  <field name="accelerator">
+    <null/>
+  </field>
+</codeTemplateItem>
+
+<codeTemplateItem>
+  <field name="contentType">
+    <String>text/xsd</String>
+  </field>
+  <field name="unparsedInsertString">
+    <String>&lt;xs:simpleType name="${caret}SimpleType">
+    &lt;xs:annotation>
+    &lt;xs:documentation>&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;xs:restriction base="xs:token">
+    &lt;/xs:restriction>
+    &lt;/xs:simpleType></String>
+  </field>
+  <field name="descriptionString">
+    <String>NIEM simple type</String>
+  </field>
+  <field name="renderString">
+    <String>niem-type-simple</String>
+  </field>
+  <field name="enabled">
+    <Boolean>true</Boolean>
+  </field>
+  <field name="accelerator">
+    <null/>
+  </field>
+</codeTemplateItem>
+
+<codeTemplateItem>
+  <field name="contentType">
+    <String>text/xsd</String>
+  </field>
+  <field name="unparsedInsertString">
+    <String>&lt;xs:simpleType name="${caret}CodeSimpleType">
+    &lt;xs:annotation>
+    &lt;xs:documentation>&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;xs:restriction base="xs:token">
+    &lt;xs:enumeration value="">
+    &lt;xs:annotation>
+    &lt;xs:documentation>&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;/xs:enumeration>
+    &lt;xs:enumeration value="">
+    &lt;xs:annotation>
+    &lt;xs:documentation>&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;/xs:enumeration>
+    &lt;/xs:restriction>
+    &lt;/xs:simpleType></String>
+  </field>
+  <field name="descriptionString">
+    <String>NIEM simple type with enumerations (codes)</String>
+  </field>
+  <field name="renderString">
+    <String>niem-type-enum</String>
+  </field>
+  <field name="enabled">
+    <Boolean>true</Boolean>
+  </field>
+  <field name="accelerator">
+    <null/>
+  </field>
+</codeTemplateItem>
+
+<codeTemplateItem>
+  <field name="contentType">
+    <String>text/xsd</String>
+  </field>
+  <field name="unparsedInsertString">
+    <String>&lt;xs:enumeration value="">
+    &lt;xs:annotation>
+    &lt;xs:documentation>&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;/xs:enumeration></String>
+  </field>
+  <field name="descriptionString">
+    <String>NIEM enumeration</String>
+  </field>
+  <field name="renderString">
+    <String>niem-enum</String>
+  </field>
+  <field name="enabled">
+    <Boolean>true</Boolean>
+  </field>
+  <field name="accelerator">
+    <null/>
+  </field>
+</codeTemplateItem>
+
+<codeTemplateItem>
+  <field name="contentType">
+    <String>text/xsd</String>
+  </field>
+  <field name="unparsedInsertString">
+    <String>&lt;xs:simpleType name="${caret}ListSimpleType">
+    &lt;xs:annotation>
+    &lt;xs:documentation>A data type for a list of ...&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;xs:list itemType=""/>
+    &lt;/xs:simpleType></String>
+  </field>
+  <field name="descriptionString">
+    <String>NIEM simple list type (space-separated list of values)</String>
+  </field>
+  <field name="renderString">
+    <String>niem-type-list</String>
+  </field>
+  <field name="enabled">
+    <Boolean>true</Boolean>
+  </field>
+  <field name="accelerator">
+    <null/>
+  </field>
+</codeTemplateItem>
+
+<codeTemplateItem>
+  <field name="contentType">
+    <String>text/xsd</String>
+  </field>
+  <field name="unparsedInsertString">
+    <String>&lt;xs:simpleType name="${caret}SimpleType">
+    &lt;xs:annotation>
+    &lt;xs:documentation>&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;xs:union memberTypes=""/>
+    &lt;/xs:simpleType></String>
+  </field>
+  <field name="descriptionString">
+    <String>NIEM simple union type (combines the set of allowable values from two or more simple types)</String>
+  </field>
+  <field name="renderString">
+    <String>niem-type-union</String>
+  </field>
+  <field name="enabled">
+    <Boolean>true</Boolean>
+  </field>
+  <field name="accelerator">
+    <null/>
+  </field>
+</codeTemplateItem>
+
+<codeTemplateItem>
+  <field name="contentType">
+    <String>text/xsd</String>
+  </field>
+  <field name="unparsedInsertString">
+    <String>&lt;xs:complexType name="${caret}CodeType">
+    &lt;xs:annotation>
+    &lt;xs:documentation>&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;xs:simpleContent>
+    &lt;xs:extension base="">
+    &lt;xs:attributeGroup ref="structures:SimpleObjectAttributeGroup">
+    &lt;/xs:extension>
+    &lt;/xs:simpleContent>
+    &lt;/xs:complexType>
+
+    &lt;xs:simpleType name="${caret}CodeSimpleType">
+    &lt;xs:annotation>
+    &lt;xs:documentation>&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;xs:restriction base="xs:token">
+    &lt;xs:enumeration value="">
+    &lt;xs:annotation>
+    &lt;xs:documentation>&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;/xs:enumeration>
+    &lt;xs:enumeration value="">
+    &lt;xs:annotation>
+    &lt;xs:documentation>&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;/xs:enumeration>
+    &lt;/xs:restriction>
+    &lt;/xs:simpleType></String>
+  </field>
+  <field name="descriptionString">
+    <String>NIEM code CSC type and simple type</String>
+  </field>
+  <field name="renderString">
+    <String>niem-pattern-code-2</String>
+  </field>
+  <field name="enabled">
+    <Boolean>true</Boolean>
+  </field>
+  <field name="accelerator">
+    <null/>
+  </field>
+</codeTemplateItem>
+
+<codeTemplateItem>
+  <field name="contentType">
+    <String>text/xsd</String>
+  </field>
+  <field name="unparsedInsertString">
+    <String>&lt;xs:element name="${caret}Code" type="">
+    &lt;xs:annotation>
+    &lt;xs:documentation>&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;/xs:element>
+
+    &lt;xs:complexType name="${caret}CodeType">
+    &lt;xs:annotation>
+    &lt;xs:documentation>&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;xs:simpleContent>
+    &lt;xs:extension base="">
+    &lt;xs:attributeGroup ref="structures:SimpleObjectAttributeGroup">
+    &lt;/xs:extension>
+    &lt;/xs:simpleContent>
+    &lt;/xs:complexType>
+
+    &lt;xs:simpleType name="${caret}CodeSimpleType">
+    &lt;xs:annotation>
+    &lt;xs:documentation>&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;xs:restriction base="xs:token">
+    &lt;xs:enumeration value="">
+    &lt;xs:annotation>
+    &lt;xs:documentation>&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;/xs:enumeration>
+    &lt;xs:enumeration value="">
+    &lt;xs:annotation>
+    &lt;xs:documentation>&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;/xs:enumeration>
+    &lt;/xs:restriction>
+    &lt;/xs:simpleType></String>
+  </field>
+  <field name="descriptionString">
+    <String>NIEM code element, CSC type and simple type</String>
+  </field>
+  <field name="renderString">
+    <String>niem-pattern-code-3</String>
+  </field>
+  <field name="enabled">
+    <Boolean>true</Boolean>
+  </field>
+  <field name="accelerator">
+    <null/>
+  </field>
+</codeTemplateItem>
+
+<codeTemplateItem>
+  <field name="contentType">
+    <String>text/xsd</String>
+  </field>
+  <field name="unparsedInsertString">
+    <String>&lt;xs:element name="${caret}Abstract" abstract="true">
+    &lt;xs:annotation>
+    &lt;xs:documentation>A data concept for ...&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;/xs:element>
+
+    &lt;xs:element name="Code" type="" substitutionGroup="">
+    &lt;xs:annotation>
+    &lt;xs:documentation>&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;/xs:element>
+
+    &lt;xs:complexType name="${caret}CodeType">
+    &lt;xs:annotation>
+    &lt;xs:documentation>&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;xs:simpleContent>
+    &lt;xs:extension base="">
+    &lt;xs:attributeGroup ref="structures:SimpleObjectAttributeGroup">
+    &lt;/xs:extension>
+    &lt;/xs:simpleContent>
+    &lt;/xs:complexType>
+
+    &lt;xs:simpleType name="${caret}CodeSimpleType">
+    &lt;xs:annotation>
+    &lt;xs:documentation>&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;xs:restriction base="xs:token">
+    &lt;xs:enumeration value="">
+    &lt;xs:annotation>
+    &lt;xs:documentation>&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;/xs:enumeration>
+    &lt;xs:enumeration value="">
+    &lt;xs:annotation>
+    &lt;xs:documentation>&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;/xs:enumeration>
+    &lt;/xs:restriction>
+    &lt;/xs:simpleType></String>
+  </field>
+  <field name="descriptionString">
+    <String>NIEM abstract element, substitutable code element, and code CSC type and simple type</String>
+  </field>
+  <field name="renderString">
+    <String>niem-pattern-code-4</String>
+  </field>
+  <field name="enabled">
+    <Boolean>true</Boolean>
+  </field>
+  <field name="accelerator">
+    <null/>
+  </field>
+</codeTemplateItem>
+
+<codeTemplateItem>
+  <field name="contentType">
+    <String>text/xsd</String>
+  </field>
+  <field name="unparsedInsertString">
+    <String>&lt;xs:import schemaLocation="" namespace="" appinfo:externalImportIndicator="true">
+    &lt;xs:annotation>
+    &lt;xs:documentation>&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;/xs:import></String>
+  </field>
+  <field name="descriptionString">
+    <String>NIEM import statement for a non-conformant schema (appinfo attribute and definition required)</String>
+  </field>
+  <field name="renderString">
+    <String>niem-import-ext</String>
+  </field>
+  <field name="enabled">
+    <Boolean>true</Boolean>
+  </field>
+  <field name="accelerator">
+    <null/>
+  </field>
+</codeTemplateItem>
+
+<codeTemplateItem>
+  <field name="contentType">
+    <String>text/xsd</String>
+  </field>
+  <field name="unparsedInsertString">
+    <String>&lt;xs:complexType name="${caret}Type" appinfo:externalAdapterTypeIndicator="true">
+    &lt;xs:annotation>
+    &lt;xs:documentation>&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;xs:complexContent>
+    &lt;xs:extension base="structures:ObjectType">
+    &lt;xs:sequence>
+    &lt;xs:element ref="" minOccurs="1" maxOccurs="1">
+    &lt;xs:annotation>
+    &lt;xs:documentation>&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;/xs:element>
+    &lt;/xs:sequence>
+    &lt;/xs:extension>
+    &lt;/xs:complexContent>
+    &lt;/xs:complexType></String>
+  </field>
+  <field name="descriptionString">
+    <String>A NIEM adapter type, which wraps an element from a non-conformant namespace</String>
+  </field>
+  <field name="renderString">
+    <String>niem-type-adapter</String>
+  </field>
+  <field name="enabled">
+    <Boolean>true</Boolean>
+  </field>
+  <field name="accelerator">
+    <null/>
+  </field>
+</codeTemplateItem>
+
+<codeTemplateItem>
+  <field name="contentType">
+    <String>text/xsd</String>
+  </field>
+  <field name="unparsedInsertString">
+    <String>&lt;xs:element name="${caret}Association" type="AssociationType">
+    &lt;xs:annotation>
+    &lt;xs:documentation>An association ...&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;/xs:element>
+
+    &lt;xs:complexType name="AssociationType">
+    &lt;xs:annotation>
+    &lt;xs:documentation>A data type for a relationship ...&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;xs:complexContent>
+    &lt;xs:extension base="nc:AssociationType">
+    &lt;xs:sequence>
+    &lt;xs:element ref="" minOccurs="1" maxOccurs="1"/>
+    &lt;/xs:sequence>
+    &lt;/xs:extension>
+    &lt;/xs:complexContent>
+    &lt;/xs:complexType></String>
+  </field>
+  <field name="descriptionString">
+    <String>NIEM association element and type</String>
+  </field>
+  <field name="renderString">
+    <String>niem-pattern-assn</String>
+  </field>
+  <field name="enabled">
+    <Boolean>true</Boolean>
+  </field>
+  <field name="accelerator">
+    <null/>
+  </field>
+</codeTemplateItem>
+
+<codeTemplateItem>
+  <field name="contentType">
+    <String>text/xsd</String>
+  </field>
+  <field name="unparsedInsertString">
+    <String>&lt;xs:element name="${caret}AugmentationPoint" abstract="true">
+    &lt;xs:annotation>
+    &lt;xs:documentation>An augmentation point for ...&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;/xs:element></String>
+  </field>
+  <field name="descriptionString">
+    <String>A NIEM augmentation point element (abstract substitution point)</String>
+  </field>
+  <field name="renderString">
+    <String>niem-elt-aug-point</String>
+  </field>
+  <field name="enabled">
+    <Boolean>true</Boolean>
+  </field>
+  <field name="accelerator">
+    <null/>
+  </field>
+</codeTemplateItem>
+
+<codeTemplateItem>
+  <field name="contentType">
+    <String>text/xsd</String>
+  </field>
+  <field name="unparsedInsertString">
+    <String>&lt;xs:element name="${caret}Augmentation" type="AugmentationType" substitutionGroup="AugmentationPoint">
+    &lt;xs:annotation>
+    &lt;xs:documentation>Additional information about ...&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;/xs:element>
+
+    &lt;xs:complexType name="AugmentationType">
+    &lt;xs:annotation>
+    &lt;xs:documentation>A data type for additional information about ...&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;xs:complexContent>
+    &lt;xs:extension base="structures:AugmentationType">
+    &lt;xs:sequence>
+    &lt;xs:element ref="" minOccurs="1" maxOccurs="1"/>
+    &lt;/xs:sequence>
+    &lt;/xs:extension>
+    &lt;/xs:complexContent>
+    &lt;/xs:complexType></String>
+  </field>
+  <field name="descriptionString">
+    <String>NIEM augmentation element and type (add local content to a type in a different namespace)</String>
+  </field>
+  <field name="renderString">
+    <String>niem-pattern-aug</String>
+  </field>
+  <field name="enabled">
+    <Boolean>true</Boolean>
+  </field>
+  <field name="accelerator">
+    <null/>
+  </field>
+</codeTemplateItem>
+
+<codeTemplateItem>
+  <field name="contentType">
+    <String>text/xsd</String>
+  </field>
+  <field name="unparsedInsertString">
+    <String>&lt;xs:appinfo>
+    &lt;appinfo:LocalTerm term="" literal=""/>
+    &lt;/xs:appinfo></String>
+  </field>
+  <field name="descriptionString">
+    <String>NIEM Local Terminology with a literal string</String>
+  </field>
+  <field name="renderString">
+    <String>niem-term-lit</String>
+  </field>
+  <field name="enabled">
+    <Boolean>true</Boolean>
+  </field>
+  <field name="accelerator">
+    <null/>
+  </field>
+</codeTemplateItem>
+
+<codeTemplateItem>
+  <field name="contentType">
+    <String>text/xsd</String>
+  </field>
+  <field name="unparsedInsertString">
+    <String>&lt;xs:appinfo>
+    &lt;appinfo:LocalTerm term="" definition=""/>
+    &lt;/xs:appinfo></String>
+  </field>
+  <field name="descriptionString">
+    <String>NIEM Local Terminology with a definition</String>
+  </field>
+  <field name="renderString">
+    <String>niem-term-def</String>
+  </field>
+  <field name="enabled">
+    <Boolean>true</Boolean>
+  </field>
+  <field name="accelerator">
+    <null/>
+  </field>
+</codeTemplateItem>
+
+<codeTemplateItem>
+  <field name="contentType">
+    <String>text/xsd</String>
+  </field>
+  <field name="unparsedInsertString">
+    <String>&lt;xs:element name="Metadata" type="MetadataType" appinfo:appliesToTypes="" appinfo:appliesToElements="">
+    &lt;xs:annotation>
+    &lt;xs:documentation>Metadata about ...&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;/xs:element>
+
+    &lt;xs:complexType name="MetadataType">
+    &lt;xs:annotation>
+    &lt;xs:documentation>A data type for metadata about ...&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;xs:complexContent>
+    &lt;xs:extension base="structures:MetadataType">
+    &lt;xs:sequence>
+    &lt;xs:element ref="" minOccurs="1" maxOccurs="1"/>
+    &lt;/xs:sequence>
+    &lt;/xs:extension>
+    &lt;/xs:complexContent>
+    &lt;/xs:complexType></String>
+  </field>
+  <field name="descriptionString">
+    <String>NIEM metadata element and type</String>
+  </field>
+  <field name="renderString">
+    <String>niem-pattern-metadata</String>
+  </field>
+  <field name="enabled">
+    <Boolean>true</Boolean>
+  </field>
+  <field name="accelerator">
+    <null/>
+  </field>
+</codeTemplateItem>
+
+<codeTemplateItem>
+  <field name="contentType">
+    <String>text/xsd</String>
+  </field>
+  <field name="unparsedInsertString">
+    <String>&lt;xs:element name="RoleOf${caret}" type="" substitutionGroup="nc:RoleOfAbstract">
+    &lt;xs:annotation>
+    &lt;xs:documentation>&lt;/xs:documentation>
+    &lt;/xs:annotation>
+    &lt;/xs:element></String>
+  </field>
+  <field name="descriptionString">
+    <String>A NIEM role element</String>
+  </field>
+  <field name="renderString">
+    <String>niem-elt-role</String>
+  </field>
+  <field name="enabled">
+    <Boolean>true</Boolean>
+  </field>
+  <field name="accelerator">
+    <null/>
+  </field>
+</codeTemplateItem>
+
+<codeTemplateItem>
+  <field name="contentType">
+    <String>text/xsd</String>
+  </field>
+  <field name="unparsedInsertString">
+    <String>&lt;?xml version="1.0" encoding="US-ASCII"?>
+    &lt;xs:schema
+    targetNamespace="" version=""
+
+    xsi:schemaLocation="http://release.niem.gov/niem/appinfo/4.0/ ../niem/utility/appinfo/4.0/appinfo.xsd
+    http://release.niem.gov/niem/conformanceTargets/3.0/ ../niem/utility/conformanceTargets/3.0/conformanceTargets.xsd"
+
+    ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/4.0/#ReferenceSchemaDocument"
+
+    xmlns:appinfo="http://release.niem.gov/niem/appinfo/4.0/"
+    xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
+    xmlns:nc="http://release.niem.gov/niem/niem-core/4.0/"
+    xmlns:niem-xs="http://release.niem.gov/niem/proxy/xsd/4.0/"
+    xmlns:structures="http://release.niem.gov/niem/structures/4.0/"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    &lt;xs:annotation>
+    &lt;xs:documentation>&lt;/xs:documentation>
+    &lt;xs:appinfo>
+    &lt;appinfo:LocalTerm term="" literal=""/>
+    &lt;/xs:appinfo>
+    &lt;/xs:annotation>
+
+    &lt;xs:import schemaLocation="" namespace=""/>
+    &lt;xs:import schemaLocation="../niem/niem-core/4.0/niem-core.xsd"
+              namespace="http://release.niem.gov/niem/niem-core/4.0/"/>
+    &lt;xs:import schemaLocation="../niem/utility/structures/4.0/structures.xsd"
+              namespace="http://release.niem.gov/niem/structures/4.0/"/>
+
+    &lt;/xs:schema></String>
+  </field>
+  <field name="descriptionString">
+    <String>A basic template for a NIEM XML Schema</String>
+  </field>
+  <field name="renderString">
+    <String>niem-schema</String>
+  </field>
+  <field name="enabled">
+    <Boolean>true</Boolean>
+  </field>
+  <field name="accelerator">
+    <null/>
+  </field>
+</codeTemplateItem>
+
+<!--
+
+<codeTemplateItem>
+  <field name="contentType">
+    <String>text/xsd</String>
+  </field>
+  <field name="unparsedInsertString">
+    <String></String>
+  </field>
+  <field name="descriptionString">
+    <String></String>
+  </field>
+  <field name="renderString">
+    <String></String>
+  </field>
+  <field name="enabled">
+    <Boolean>true</Boolean>
+  </field>
+  <field name="accelerator">
+    <null/>
+  </field>
+</codeTemplateItem>
+-->
+
+
+</codeTemplateItem-array>
+</entry>
+</serializableOrderedMap>
+</serialized>
