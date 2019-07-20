@@ -1,0 +1,310 @@
+{
+	// Place your snippets for xml here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+
+  // Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+  // }
+
+  "niem-attr": {
+    "prefix": "niem-attr",
+    "description": "A NIEM attribute",
+    "body": [
+      "<xs:attribute name='$1' type='$2'>",
+      "\t<xs:annotation>",
+      "\t\t<xs:documentation>$3</xs:documentation>",
+      "\t</xs:annotation>",
+      "</xs:attribute>"
+    ]
+  },
+
+  "niem-elt": {
+    "prefix": "niem-elt",
+    "description": "A NIEM element",
+    "body": [
+      "<xs:element name='$1' type='$2' nillable='true'>",
+      "\t<xs:annotation>",
+      "\t\t<xs:documentation>$3</xs:documentation>",
+      "\t</xs:annotation>",
+      "</xs:element>"
+    ]
+  },
+
+  "niem-elt-abst": {
+    "prefix": "niem-elt-abst",
+    "description": "A NIEM abstract element",
+    "body": [
+      "<xs:element name='$1Abstract' abstract='true'>",
+      "\t<xs:annotation>",
+      "\t\t<xs:documentation>A data concept for a $3</xs:documentation>",
+      "\t</xs:annotation>",
+      "</xs:element>"
+    ]
+  },
+
+  "niem-elt-aug": {
+    "prefix": "niem-elt-aug",
+    "description": "A NIEM augmentation element",
+    "body": [
+      "<xs:element name='$1Augmentation' type='${2:ext}$1AugmentationType' substitutionGroup='$1AugmentationPoint'>",
+      "\t<xs:annotation>",
+      "\t\t<xs:documentation>Additional information about ${3:a $1}</xs:documentation>",
+      "\t</xs:annotation>",
+      "</xs:element>"
+    ]
+  },
+
+  "niem-elt-aug-point": {
+    "prefix": "niem-elt-aug-point",
+    "description": "A NIEM augmentation point element",
+    "body": [
+      "<xs:element name='$1AugmentationPoint' abstract='true'>",
+      "\t<xs:annotation>",
+      "\t\t<xs:documentation>An augmentation point for $1.</xs:documentation>",
+      "\t</xs:annotation>",
+      "</xs:element>"
+    ]
+  },
+
+  "niem-elt-metadata": {
+    "prefix": "niem-elt-metadata",
+    "description": "A NIEM metadata element",
+    "body": [
+      "<xs:element name='$1Metadata' type='${2:ext}:$1MetadataType' nillable='true'>",
+      "\t<xs:annotation>",
+      "\t\t<xs:documentation>Information that further qualifies $3</xs:documentation>",
+      "\t</xs:annotation>",
+      "</xs:element>"
+    ]
+  },
+
+  "niem-type-ccc": {
+    "prefix": "niem-type-ccc",
+    "description": "A NIEM type with sub-elements",
+    "body": [
+      "<xs:complexType name='$1Type'>",
+      "\t<xs:annotation>",
+      "\t\t<xs:documentation>A data type for $2</xs:documentation>",
+      "\t</xs:annotation>",
+      "\t<xs:complexContent>",
+      "\t\t<xs:extension base='${3:structures:ObjectType}'>",
+      "\t\t\t<xs:sequence>",
+      "\t\t\t\t<xs:element ref='$4' minOccurs='0' maxOccurs='unbounded'/>",
+      "\t\t\t</xs:sequence>",
+      "\t\t</xs:extension>",
+      "\t</xs:complexContent>",
+      "</xs:complexType>"
+    ]
+  },
+
+  "niem-type-aug": {
+    "prefix": "niem-type-aug",
+    "description": "A NIEM augmentation type",
+    "body": [
+      "<xs:complexType name='$1AugmentationType'>",
+      "\t<xs:annotation>",
+      "\t\t<xs:documentation>A data type for additional information about a $1</xs:documentation>",
+      "\t</xs:annotation>",
+      "\t<xs:complexContent>",
+      "\t\t<xs:extension base='structures:AugmentationType'>",
+      "\t\t\t<xs:sequence>",
+      "\t\t\t\t<xs:element ref='$2' minOccurs='0' maxOccurs='unbounded'/>",
+      "\t\t\t</xs:sequence>",
+      "\t\t</xs:extension>",
+      "\t</xs:complexContent>",
+      "</xs:complexType>"
+    ]
+  },
+
+  "niem-type-metadata": {
+    "prefix": "niem-type-metadata",
+    "description": "A NIEM metadata type",
+    "body": [
+      "<xs:complexType name='$1MetadataType'>",
+      "\t<xs:annotation>",
+      "\t\t<xs:documentation>A data type for information that further qualifies $2</xs:documentation>",
+      "\t</xs:annotation>",
+      "\t<xs:complexContent>",
+      "\t\t<xs:extension base='structures:MetadataType'>",
+      "\t\t\t<xs:sequence>",
+      "\t\t\t\t<xs:element ref='$3' minOccurs='0' maxOccurs='unbounded'/>",
+      "\t\t\t</xs:sequence>",
+      "\t\t</xs:extension>",
+      "\t</xs:complexContent>",
+      "</xs:complexType>"
+    ]
+  },
+
+  "niem-type-csc": {
+    "prefix": "niem-type-csc",
+    "description": "A NIEM complex type that carries a value and optional attributes",
+    "body": [
+      "<xs:complexType name='$1Type'>",
+      "\t<xs:annotation>",
+      "\t\t<xs:documentation>A data type for $2</xs:documentation>",
+      "\t</xs:annotation>",
+      "\t<xs:simpleContent>",
+      "\t\t<xs:extension base='$3:$1SimpleType'>",
+      "\t\t\t<xs:attributeGroup ref='structures:SimpleObjectAttributeGroup'/>",
+      "\t\t</xs:extension>",
+      "\t</xs:simpleContent>",
+      "</xs:complexType>"
+    ]
+  },
+
+  "niem-type-simple": {
+    "prefix": "niem-type-simple",
+    "description": "A NIEM simple type",
+    "body": [
+      "<xs:simpleType name='$1SimpleType'>",
+      "\t<xs:annotation>",
+      "\t\t<xs:documentation>A data type for $2</xs:documentation>",
+      "\t</xs:annotation>",
+      "\t<xs:restriction base='${3:xs:token}'>",
+      "\t\t<xs:enumeration value='$4'>",
+      "\t\t\t<xs:annotation>",
+      "\t\t\t\t<xs:documentation>$5</xs:documentation>",
+      "\t\t\t</xs:annotation>",
+      "\t\t</xs:enumeration>",
+      "\t</xs:restriction>",
+      "</xs:simpleType>"
+    ]
+  },
+
+  "niem-pattern-aug": {
+    "prefix": "niem-pattern-aug",
+    "description": "A NIEM augmentation element and type",
+    "body": [
+      "<xs:element name='$1Augmentation' type='${2:ext}:$1AugmentationType' substitutionGroup='$3:$1AugmentationPoint'>",
+      "\t<xs:annotation>",
+      "\t\t<xs:documentation>Additional information about ${4:a $1}</xs:documentation>",
+      "\t</xs:annotation>",
+      "</xs:element>\n",
+
+      "<xs:complexType name='$1AugmentationType'>",
+      "\t<xs:annotation>",
+      "\t\t<xs:documentation>A data type for additional information about ${4:a $1}</xs:documentation>",
+      "\t</xs:annotation>",
+      "\t<xs:complexContent>",
+      "\t\t<xs:extension base='structures:AugmentationType'>",
+      "\t\t\t<xs:sequence>",
+      "\t\t\t\t<xs:element ref='$5' minOccurs='0' maxOccurs='unbounded'/>",
+      "\t\t\t</xs:sequence>",
+      "\t\t</xs:extension>",
+      "\t</xs:complexContent>",
+      "</xs:complexType>"
+    ]
+  },
+
+  "niem-pattern-code-4": {
+    "prefix": "niem-pattern-code-4",
+    "description": "A NIEM code set with a CSC type, simple type, code element, and abstract element",
+    "body": [
+      "<xs:element name='$1Code' type='$1CodeType' substitutionGroup='$1Abstract' nillable='true'>",
+      "\t<xs:annotation>",
+      "\t\t<xs:documentation>A $2</xs:documentation>",
+      "\t</xs:annotation>",
+      "</xs:element>\n",
+
+      "<xs:element name='$1Abstract' abstract='true'>",
+      "\t<xs:annotation>",
+      "\t\t<xs:documentation>A data concept for a $2</xs:documentation>",
+      "\t</xs:annotation>",
+      "</xs:element>\n",
+
+      "<xs:complexType name='$1CodeType'>",
+      "\t<xs:annotation>",
+      "\t\t<xs:documentation>A data type for a $2</xs:documentation>",
+      "\t</xs:annotation>",
+      "\t<xs:simpleContent>",
+      "\t\t<xs:extension base='xs:token'>",
+      "\t\t\t<xs:attributeGroup ref='structures:SimpleObjectAttributeGroup'/>",
+      "\t\t</xs:extension>",
+      "\t</xs:simpleContent>",
+      "</xs:complexType>\n",
+
+      "<xs:simpleType name='$1CodeSimpleType'>",
+      "\t<xs:annotation>",
+      "\t\t<xs:documentation>A data type for a $2</xs:documentation>",
+      "\t</xs:annotation>",
+      "\t<xs:restriction>",
+      "\t\t<xs:enumeration value='$3'>",
+      "\t\t\t<xs:annotation>",
+      "\t\t\t\t<xs:documentation>$4</xs:documentation>",
+      "\t\t\t</xs:annotation>",
+      "\t\t</xs:enumeration>",
+      "\t</xs:restriction>",
+      "</xs:simpleType>\n"
+    ]
+  },
+
+  "niem-pattern-metadata": {
+    "prefix": "niem-pattern-metadata",
+    "description": "A NIEM metadata element and type",
+    "body": [
+      "<xs:element name='$1Metadata' type='${2:ext}:$1MetadataType' nillable='true'>",
+      "\t<xs:annotation>",
+      "\t\t<xs:documentation>Information that further qualifies $3</xs:documentation>",
+      "\t</xs:annotation>",
+      "</xs:element>\n",
+
+      "<xs:complexType name='$1MetadataType'>",
+      "\t<xs:annotation>",
+      "\t\t<xs:documentation>A data type for information that further qualifies $3</xs:documentation>",
+      "\t</xs:annotation>",
+      "\t<xs:complexContent>",
+      "\t\t<xs:extension base='structures:MetadataType'>",
+      "\t\t\t<xs:sequence>",
+      "\t\t\t\t<xs:element ref='$4' minOccurs='0' maxOccurs='unbounded'/>",
+      "\t\t\t</xs:sequence>",
+      "\t\t</xs:extension>",
+      "\t</xs:complexContent>",
+      "</xs:complexType>"
+    ]
+  },
+
+  "niem-schema": {
+    "prefix": "niem-schema",
+    "description": "A NIEM schema template with header information",
+    "body": [
+      "<?xml version='1.0' encoding='US-ASCII'?>",
+      "<xs:schema",
+      "\ttargetNamespace='$1' version='$2'\n",
+
+      "\txsi:schemaLocation='http://release.niem.gov/niem/appinfo/4.0/ ../niem/utility/appinfo/4.0/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ ../niem/utility/conformanceTargets/3.0/conformanceTargets.xsd'\n",
+
+      "\tct:conformanceTargets='http://reference.niem.gov/niem/specification/naming-and-design-rules/4.0/#ExtensionSchemaDocument'\n",
+
+      "\txmlns:$3='$1'\n",
+      "\txmlns:appinfo='http://release.niem.gov/niem/appinfo/4.0/'",
+      "\txmlns:ct='http://release.niem.gov/niem/conformanceTargets/3.0/'",
+      "\txmlns:nc='http://release.niem.gov/niem/niem-core/4.0/'",
+      "\txmlns:niem-xs='http://release.niem.gov/niem/proxy/xsd/4.0/'",
+      "\txmlns:structures='http://release.niem.gov/niem/structures/4.0/'",
+      "\txmlns:xs='http://www.w3.org/2001/XMLSchema'",
+      "\txmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>\n",
+
+      "\t<xs:annotation>",
+      "\t\t<xs:documentation>$4</xs:documentation>",
+      "\t</xs:annotation>\n",
+
+      "\t<xs:import schemaLocation='../niem/niem-core/4.0/niem-core.xsd' namespace='http://release.niem.gov/niem/niem-core/4.0/'/>",
+      "\t<xs:import schemaLocation='../niem/proxy/xsd/4.0/xs.xsd' namespace='http://release.niem.gov/niem/proxy/xsd/4.0/'/>",
+      "\t<xs:import schemaLocation='../niem/utility/structures/4.0/structures.xsd' namespace='http://release.niem.gov/niem/structures/4.0/'/>\n",
+
+      "\t$0",
+
+      "</xs:schema>"
+    ]
+  }
+
+
+}
