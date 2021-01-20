@@ -1,7 +1,7 @@
 
 # Using NIEM snippets with Oxygen XML Editor
 
-For more information on snippets in Oxygen, please their page about [Code Templates](https://www.oxygenxml.com/doc/versions/20.0/ug-author/topics/code-templates-x-modes3.html).
+For more information on snippets in Oxygen, please their page about [Code Templates](https://www.oxygenxml.com/doc/versions/23.0/ug-editor/topics/code-templates-x-editing2.html).
 
 - [Import snippets](#import-snippets)
 - [Use a snippet](#use-a-snippet)
@@ -12,31 +12,33 @@ For more information on snippets in Oxygen, please their page about [Code Templa
 
 - Download the snippet file to any directory
 - In Oxygen, click on menu item **Options** -> **Preferences...**
-- In the Preferences panel on the left sidebar, click on **Editor** -> **Templates** -> **Code Templates**
+- In the Preferences panel on the left sidebar, click on **Editor** -> **Content Completion** -> **Code Templates**
 - Click the Import button near the bottom right of the panel and select the downloaded snippets file
 
 ![Importing snippets](images/import.png)
 
 ## Use a snippet
 
-Note: All NIEM snippets begin with "niem-"
+> Note: All NIEM snippets begin with "niem-"
 
 - Type "niem" in an XML schema file
 - Hit Ctrl/Cmd + Space
 - Scroll down through the drop-down list to see all applicable snippets that begin with "niem".
   - Recently used snippets will appear at the top of the list
-  - The snippet title and code will
+  - The snippet title and code will appear in a preview box
 - The more you type in the snippet name before hitting Ctrl/Cmd + Space, the narrower the list will be.
-  - "niem-type" + Ctrl/Cmd + Space will bring up a list of all NIEM type snippets.
-  - "niem-type-ccc" + Ctrl/Cmd + Space will automatically
+  - "niem" + Ctrl/Cmd + Space will bring up a list of all NIEM snippets.
+  - "niem-type" + Ctrl/Cmd + Space will filter the list of snippets to NIEM types.
 - Hit "Tab" or "Enter" to load the snippet
 - The snippet will be incomplete.
   - Fields like names and definitions may be partially provided or completely blank and must be filled in.
   - In some cases, defaults may be provided but can be changed as needed.
 
+![Selecting a snippet](images/select.png)
+
 ## Modify a snippet
 
-- In Oxygen, click on "Options" / "Preferences" / "Editor" / "Templates" / "Code Templates"
+- In Oxygen, click on "Options" / "Preferences" / "Editor" / "Content Completion" / "Code Templates"
 - Select the snippet to modify
   - The snippet will begin with "niem-"
   - NIEM snippets will appear under "XSD Editor" and/or "JSON Editor" group
