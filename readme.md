@@ -14,11 +14,11 @@ Notes:
 | Label | Description | XML info | JSON info |
 | ----- | ----------- | --- | ---- |
 | niem-elt | NIEM element | [XML info](https://niem.github.io/reference/concepts/property/element/xml/) | |
-| niem-elt-abst | NIEM abstract element | [XML info](https://niem.github.io/reference/concepts/property/abstract/xml/) | |
+| niem-elt-abstract | NIEM abstract element | [XML info](https://niem.github.io/reference/concepts/property/abstract/xml/) | |
 | niem-elt-aug-point | NIEM augmentation point element (abstract) | [XML info](https://niem.github.io/reference/concepts/augmentation/point/xml/) | |
 | niem-elt-role | NIEM role element | [XML info](https://niem.github.io/reference/concepts/role/xml/) | |
-| niem-elt-subst | NIEM substitutable element | [XML info](https://niem.github.io/reference/concepts/property/substitutable/xml/) | |
-| niem-attr | NIEM attribute | [XML info](https://niem.github.io/reference/concepts/property/attribute/xml/) | |
+| niem-elt-substitution | NIEM substitutable element | [XML info](https://niem.github.io/reference/concepts/property/substitutable/xml/) | |
+| niem-attribute | NIEM attribute | [XML info](https://niem.github.io/reference/concepts/property/attribute/xml/) | |
 
 ## Type Snippets
 
@@ -47,7 +47,8 @@ Notes:
 | Label | Description | XML info | JSON info |
 | ----- | ----------- | --- | ---- |
 | niem-enum | NIEM enumeration | [XML info](https://niem.github.io/reference/concepts/facet/xml/) | |
-| niem-import-ext | NIEM external import statement | | |
-| niem-term-lit | NIEM local terminology with a literal string | [XML info](https://niem.github.io/reference/concepts/local-term/xml/) | |
+| niem-import-external | NIEM external import statement | | |
+| niem-term-literal | NIEM local terminology with a literal string | [XML info](https://niem.github.io/reference/concepts/local-term/xml/) | |
 | niem-term-def | NIEM local terminology with a definition | [XML info](https://niem.github.io/reference/concepts/local-term/xml/) | |
-| niem-schema | NIEM basic schema template | [XML info](https://niem.github.io/reference/concepts/namespace/xml/) | |
+| niem-xsd-4 | NIEM basic schema template | [XML info](https://niem.github.io/reference/concepts/namespace/xml/) | |
+| niem-xsd-5 | NIEM basic schema template | [XML info](https://niem.github.io/reference/concepts/namespace/xml/) | |

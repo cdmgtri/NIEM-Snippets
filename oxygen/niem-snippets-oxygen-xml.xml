@@ -45,7 +45,7 @@
     <String>NIEM abstract element</String>
   </field>
   <field name="renderString">
-    <String>niem-elt-abstr</String>
+    <String>niem-elt-abstract</String>
   </field>
   <field name="enabled">
     <Boolean>true</Boolean>
@@ -70,7 +70,7 @@
     <String>NIEM substitutable element</String>
   </field>
   <field name="renderString">
-    <String>niem-elt-subst</String>
+    <String>niem-elt-substitution</String>
   </field>
   <field name="enabled">
     <Boolean>true</Boolean>
@@ -95,7 +95,7 @@
     <String>NIEM attribute</String>
   </field>
   <field name="renderString">
-    <String>niem-attr</String>
+    <String>niem-attribute</String>
   </field>
   <field name="enabled">
     <Boolean>true</Boolean>
@@ -475,7 +475,7 @@
     <String>text/xsd</String>
   </field>
   <field name="unparsedInsertString">
-    <String>&lt;xs:import schemaLocation="" namespace="" appinfo:externalImportIndicator="true">
+    <String>&lt;xs:import namespace="" schemaLocation="" appinfo:externalImportIndicator="true">
     &lt;xs:annotation>
     &lt;xs:documentation>&lt;/xs:documentation>
     &lt;/xs:annotation>
@@ -485,7 +485,7 @@
     <String>NIEM import statement for a non-conformant schema (appinfo attribute and definition required)</String>
   </field>
   <field name="renderString">
-    <String>niem-import-ext</String>
+    <String>niem-import-external</String>
   </field>
   <field name="enabled">
     <Boolean>true</Boolean>
@@ -645,7 +645,7 @@
     <String>NIEM Local Terminology with a literal string</String>
   </field>
   <field name="renderString">
-    <String>niem-term-lit</String>
+    <String>niem-term-literal</String>
   </field>
   <field name="enabled">
     <Boolean>true</Boolean>
@@ -753,7 +753,7 @@
     xsi:schemaLocation="http://release.niem.gov/niem/appinfo/4.0/ ../niem/utility/appinfo/4.0/appinfo.xsd
     http://release.niem.gov/niem/conformanceTargets/3.0/ ../niem/utility/conformanceTargets/3.0/conformanceTargets.xsd"
 
-    ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/4.0/#ReferenceSchemaDocument"
+    ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/4.0/#ExtensionSchemaDocument"
 
     xmlns:appinfo="http://release.niem.gov/niem/appinfo/4.0/"
     xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
@@ -770,19 +770,66 @@
     &lt;/xs:appinfo>
     &lt;/xs:annotation>
 
-    &lt;xs:import schemaLocation="" namespace=""/>
-    &lt;xs:import schemaLocation="../niem/niem-core/4.0/niem-core.xsd"
-              namespace="http://release.niem.gov/niem/niem-core/4.0/"/>
-    &lt;xs:import schemaLocation="../niem/utility/structures/4.0/structures.xsd"
-              namespace="http://release.niem.gov/niem/structures/4.0/"/>
+    &lt;xs:import namespace="" schemaLocation=""/>
+    &lt;xs:import namespace="http://release.niem.gov/niem/niem-core/4.0/" schemaLocation="../niem/niem-core/4.0/niem-core.xsd"/>
+    &lt;xs:import namespace="http://release.niem.gov/niem/structures/4.0/" schemaLocation="../niem/utility/structures/4.0/structures.xsd"/>
 
     &lt;/xs:schema></String>
   </field>
   <field name="descriptionString">
-    <String>A basic template for a NIEM XML Schema</String>
+    <String>A basic template for a NIEM 4.0-style XML Schema</String>
   </field>
   <field name="renderString">
-    <String>niem-schema</String>
+    <String>niem-xsd-4</String>
+  </field>
+  <field name="enabled">
+    <Boolean>true</Boolean>
+  </field>
+  <field name="accelerator">
+    <null/>
+  </field>
+</codeTemplateItem>
+
+<codeTemplateItem>
+  <field name="contentType">
+    <String>text/xsd</String>
+  </field>
+  <field name="unparsedInsertString">
+    <String>&lt;?xml version="1.0" encoding="UTF-8"?>
+    &lt;xs:schema
+    targetNamespace="" version=""
+
+    xsi:schemaLocation="http://release.niem.gov/niem/appinfo/5.0/ ../niem/xsd/utility/appinfo.xsd
+    http://release.niem.gov/niem/conformanceTargets/3.0/ ../niem/utility/conformanceTargets/3.0/conformanceTargets.xsd"
+
+    ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ExtensionSchemaDocument"
+
+    xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
+    xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
+    xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/"
+    xmlns:niem-xs="http://release.niem.gov/niem/proxy/xsd/5.0/"
+    xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    &lt;xs:annotation>
+    &lt;xs:documentation>&lt;/xs:documentation>
+    &lt;xs:appinfo>
+    &lt;appinfo:LocalTerm term="" literal=""/>
+    &lt;/xs:appinfo>
+    &lt;/xs:annotation>
+
+    &lt;xs:import namespace="" schemaLocation=""/>
+    &lt;xs:import namespace="http://release.niem.gov/niem/niem-core/5.0/" schemaLocation="../niem/xsd/niem-core.xsd"/>
+    &lt;xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="../niem/utility/structures.xsd"/>
+
+    &lt;/xs:schema></String>
+  </field>
+  <field name="descriptionString">
+    <String>A basic template for a NIEM 5.0-style XML Schema</String>
+  </field>
+  <field name="renderString">
+    <String>niem-xsd-5</String>
   </field>
   <field name="enabled">
     <Boolean>true</Boolean>
